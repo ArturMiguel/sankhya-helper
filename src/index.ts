@@ -1,15 +1,14 @@
-import { cancelarNota, excluirItemNota, incluirAlterarItemNota, incluirNota } from "./sankhyaRequest/CACSP";
-import { login, logout } from "./sankhyaRequest/MobileLoginSP";
+import { cancelarNota, excluirItemNota, incluirAlterarItemNota, incluirNota } from "./CACSP";
+import { login, logout } from "./MobileLoginSP";
 
-export const sankhyaRequest = {
-    MobileLoginSP: {
-        login,
-        logout
-    },
-    CACSP: {
-        incluirNota,
-        incluirAlterarItemNota,
-        excluirItemNota,
-        cancelarNota
-    }
+export const MobileLoginSP = {
+    login,
+    logout
+}
+
+export const CACSP = {
+    incluirNota,
+    incluirAlterarItemNota,
+    excluirItemNota,
+    cancelarNota
 }

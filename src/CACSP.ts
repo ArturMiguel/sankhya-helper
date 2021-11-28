@@ -1,4 +1,4 @@
-import { parseObj, Object } from "../utils";
+import { parseObj, Object } from "./utils";
 
 export function incluirNota(cabecalho: Object, itens: Object[], informarPreco: boolean) {
     return {
