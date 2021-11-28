@@ -1,13 +1,13 @@
 {
   "name": "sankhya-helper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
-  "main": "./dist/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "ts-node": "ts-node"
   },
   "files": [
-    "dist/*",
+    "lib/*",
     "LICENSE",
     "README.md"
   ],
