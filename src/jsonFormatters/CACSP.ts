@@ -38,3 +38,23 @@ export function incluirAlterarItemNota(nunota: number | string, item: IObject) {
         }
     }
 }
+
+export function excluirItemNota(nunota: number | string, sequencia: number | string) {
+    return {
+        serviceName: "CACSP.excluirItemNota",
+        requestBody: {
+            nota: {
+                itens: {
+                    item: {
+                        NUNOTA: {
+                            $: nunota.toString()
+                        },
+                        SEQUENCIA: {
+                            $: sequencia.toString()
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
