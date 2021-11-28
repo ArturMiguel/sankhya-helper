@@ -1,6 +1,6 @@
-import { parseObj, IObject } from "../utils";
+import { parseObj, Object } from "../utils";
 
-export function incluirNota(cabecalho: IObject, itens: IObject[], informarPreco: boolean) {
+export function incluirNota(cabecalho: Object, itens: Object[], informarPreco: boolean) {
     return {
         serviceName: "CACSP.incluirNota",
         requestBody: {
@@ -11,7 +11,7 @@ export function incluirNota(cabecalho: IObject, itens: IObject[], informarPreco:
                 },
                 itens: {
                     INFORMARPRECO: informarPreco ? "True" : "N",
-                    item: itens.map((item: IObject) => ({
+                    item: itens.map((item: Object) => ({
                         ...parseObj(item),
                         NUNOTA: {}
                     }))
@@ -21,7 +21,7 @@ export function incluirNota(cabecalho: IObject, itens: IObject[], informarPreco:
     }
 }
 
-export function incluirAlterarItemNota(nunota: number | string, item: IObject) {
+export function incluirAlterarItemNota(nunota: number | string, item: Object) {
     const _nunota = nunota.toString();
     return {
         serviceName: "CACSP.incluirAlterarItemNota",
