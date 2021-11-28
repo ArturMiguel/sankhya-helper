@@ -70,7 +70,7 @@ export function cancelarNota(nunota: number | string, justificativa: string, val
                     }
                 ],
                 justificativa,
-                validarProcessosWmsEmAndamento
+                validarProcessosWmsEmAndamento: validarProcessosWmsEmAndamento? "true" : "false"
             }
         }
     }
