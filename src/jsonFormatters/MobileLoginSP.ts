@@ -22,5 +22,3 @@ export function logout() {
         pendingPrinting: "false",
     }
 }
-
-console.log(logout())
