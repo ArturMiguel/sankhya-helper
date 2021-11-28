@@ -58,3 +58,20 @@ export function excluirItemNota(nunota: number | string, sequencia: number | str
         }
     }
 }
+
+export function cancelarNota(nunota: number | string, justificativa: string, validarProcessosWmsEmAndamento: boolean) {
+    return {
+        serviceName: "CACSP.cancelarNota",
+        requestBody: {
+            notasCanceladas: {
+                nunota: [
+                    {
+                        $: nunota.toString()
+                    }
+                ],
+                justificativa,
+                validarProcessosWmsEmAndamento
+            }
+        }
+    }
+}
