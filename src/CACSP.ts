@@ -30,7 +30,6 @@ export function incluirAlterarItemNota(nunota: number | string, item: Object) {
                 NUNOTA: _nunota,
                 itens: {
                     item: {
-                        NUNOTA: _nunota,
                         ...parseObj(item)
                     }
                 }
@@ -70,7 +69,7 @@ export function cancelarNota(nunota: number | string, justificativa: string, val
                     }
                 ],
                 justificativa,
-                validarProcessosWmsEmAndamento: validarProcessosWmsEmAndamento? "true" : "false"
+                validarProcessosWmsEmAndamento: validarProcessosWmsEmAndamento ? "true" : "false"
             }
         }
     }
