@@ -1,6 +1,7 @@
 # sankhya-helper
 
 [![NPM version](https://img.shields.io/npm/v/sankhya-helper.svg?style=flat)](https://npmjs.org/package/sankhya-helper)
+[![NPM downloads](https://img.shields.io/npm/dt/sankhya-helper.svg?style=flat)](https://npmjs.org/package/sankhya-helper)
 [![NPM downloads](https://img.shields.io/npm/l/sankhya-helper.svg?style=flat)](https://npmjs.org/package/sankhya-helper)
 
 Utilitário para criar e formatar objetos JavaScript no padrão de JSON enviado na [API de integrações Sankhya](https://developer.sankhya.com.br/reference/api-de-integra%C3%A7%C3%B5es-sankhya).
@@ -271,6 +272,49 @@ CACSP.cancelarNota(3713703, "Lançamento indevido", true)
          ],
          "justificativa":"Lançamento indevido",
          "validarProcessosWmsEmAndamento":"true"
+      }
+   }
+}*/
+```
+
+### CRUDServiceProvider.saveRecord
+
+```js
+const CRUDServiceProvider = require("sankhya-helper/lib/CRUDServiceProvider");
+
+CRUDServiceProvider.saveRecord(entidade: string, input: Object, output: string);
+```
+
+Exemplo:
+
+```js
+const cidade = {
+   NOMECID: "UBERLANDIA",
+   UF: 2
+}
+
+CRUDServiceProvider.saveRecord("Cidade", cidade, "CODCID,NOMECID,UF");
+/*{
+   "serviceName":"CRUDServiceProvider.saveRecord",
+   "requestBody":{
+      "dataSet":{
+         "rootEntity":"Cidade",
+         "includePresentationFields":"N",
+         "dataRow":{
+            "localFields":{
+               "NOMECID":{
+                  "$":"Uberlândia"
+               },
+               "UF":{
+                  "$":"2"
+               }
+            }
+         },
+         "entity":{
+            "fieldset":{
+               "list":"CODCID,NOMECID,UF"
+            }
+         }
       }
    }
 }*/
