@@ -6,6 +6,12 @@
 
 Utilitário para criar e formatar objetos JavaScript no padrão de JSON enviado na [API de integrações Sankhya](https://developer.sankhya.com.br/reference/api-de-integra%C3%A7%C3%B5es-sankhya).
 
+# Nota para API Gateway
+
+Em 2022 a Sankhya introduziu uma nova API de integração chamada "Gateway" que mudou a forma de integrar com os serviços HTTP da Sankhya e principalmente a autenticação. Você pode consultar o [FAQ](https://developer.sankhya.com.br/reference/faq-1) para saber o que mudou. Este pacote `sankhya-helper` foi criado em 2021 para a API antiga, que continua existindo e alguns serviços (fora autenticação) continuam compatíveis devido ao Gateway atual ter mantido o JSON request da API antiga, então ao usar o pacote para o Gateway recomendo checar na documentação se o JSON gerado pelo pacote continua compatível.
+
+- FAQ API Gateway).
+
 # Instalação
 
 ```
